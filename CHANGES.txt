@@ -1,0 +1,33 @@
+
+FileOnline Changes
+------------------
+
+2010-05-10 Mr. 하늘
+rename 메소드 추가 : 파일명 변경, 성공시 true 실패시 false 반환
+
+보안을 목적으로 웹 어플리케이션의 WEB-INF 폴더 하위에 파일을 생성하던 것을
+웹 어플리케이션의 안정적인 구동을 위해 new FileOnline(basePath)의 basePath로 바꿈
+
+FileOnline(String basePath)
+새 FileOnline 객체를 생성
+
+getFullPath(String basePath, String fileName)
+파일 전체 경로를 구함
+
+getFullPath(String basePath, String fileName, boolean useMkdirs)
+파일 전체 경로를 구함 (폴더가 없을 시 생성)
+
+
+2010-05-04 Mr. 하늘
+모듈 생성
+
+save 메소드 : 파일 저장, 성공시 true 실패시 false 반환 (오버라이드 가능하게 설정할 수 있음)
+load 메소드 : 파일을 java.io.InputStream 형태로 불러옴
+delete 메소드 : 파일 삭제, 성공시 true 실패시 false 반환
+
+getFullPath(javax.servlet.ServletContext application, String basePath, String fileName)
+파일 전체 경로를 구함
+
+getFullPath(javax.servlet.ServletContext application, String basePath, String fileName, boolean useMkdirs)
+파일 전체 경로를 구함 (폴더가 없을 시 생성)
+
